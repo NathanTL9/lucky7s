@@ -124,3 +124,15 @@ body {
   -ms-user-select: none;
 }
 
+body.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s 2s, opacity 2s linear;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/IMG_9453.png?v=1666120943308");
+}
