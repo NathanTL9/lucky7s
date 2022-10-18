@@ -85,12 +85,45 @@
         -webkit-border-radiuss: 3px;
       }
     </style>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="./wScratchPad.js" type="text/javascript"> </script>
   </head>
   <body>
     <div class="scratch-container">
-      <div id="promo" class="scratchpad"></div>
+      <div id="promo1" class="scratchpad"></div>
+    </div>
+    <div class="promo-container" style="display: none">
+      <div class="promo-code"></div>
+      <a href="www.we-know-fun.com" target="_blank" class="btn">Register Now</a>
+    </div>
+    <div class="scratch-container">
+      <div id="promo2" class="scratchpad"></div>
+    </div>
+    <div class="promo-container" style="display: none">
+      <div class="promo-code"></div>
+      <a href="www.we-know-fun.com" target="_blank" class="btn">Register Now</a>
+    </div>
+    <div class="scratch-container">
+      <div id="promo3" class="scratchpad"></div>
+    </div>
+    <div class="promo-container" style="display: none">
+      <div class="promo-code"></div>
+      <a href="www.we-know-fun.com" target="_blank" class="btn">Register Now</a>
+    </div>
+    <div class="scratch-container">
+      <div id="promo4" class="scratchpad"></div>
+    </div>
+    <div class="promo-container" style="display: none">
+      <div class="promo-code"></div>
+      <a href="www.we-know-fun.com" target="_blank" class="btn">Register Now</a>
+    </div>
+    <div class="scratch-container">
+      <div id="promo5" class="scratchpad"></div>
+    </div>
+    <div class="promo-container" style="display: none">
+      <div class="promo-code"></div>
+      <a href="www.we-know-fun.com" target="_blank" class="btn">Register Now</a>
+    </div>
+    <div class="scratch-container">
+      <div id="promo6" class="scratchpad"></div>
     </div>
     <div class="promo-container" style="display: none">
       <div class="promo-code"></div>
@@ -104,47 +137,67 @@
     <script src="/wScratchPad.min.js" type="text/javascript"></script>
 
     <script type="text/javascript">
-            var promoCode = "";
-            var bg1 =
-              "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
-            var bg2 =
-              "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
-            var bg3 =
-              "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
-            var bgArray = [bg1, bg2, bg3],
-              selectBG = bgArray[Math.floor(Math.random() * bgArray.length)];
-            if (selectBG == bg1) {
-              promoCode = "SCRATCH400";
-            } else if (selectBG == bg2) {
-              promoCode = "SCRATCH500";
-            }
-            if (selectBG == bg3) {
-              var promoCode = "";
-            }
-            $("#promo").wScratchPad({
-              // the size of the eraser
-              size: 70,
-              // the randomized scratch image
-              bg: selectBG,
-              // give real-time updates
-              realtime: true,
-              // The overlay image
-              fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
-              // The cursor (coin) image
-              cursor:
-                'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
-
-      scratchMove: function (e, percent) {
-          console.log(percent);
-
-         if ((percent > 50) && (promoCode != '')) {
-            $('.promo-container').show();
-            $('body').removeClass('not-selectable');
-            $('.promo-code').html('Your code is: ' + promoCode);
-         }
+      var promoCode = "";
+      var bg1 =
+        "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
+      var bg2 =
+        "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
+      var bg3 =
+        "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
+      var bgArray = [bg1, bg2, bg3],
+        selectBG = bgArray[Math.floor(Math.random() * bgArray.length)];
+      if (selectBG == bg1) {
+        promoCode = "SCRATCH400";
+      } else if (selectBG == bg2) {
+        promoCode = "SCRATCH500";
       }
-              },
-            });
+      if (selectBG == bg3) {
+        var promoCode = "";
+      }
+      $("#promo").wScratchPad({
+        // the size of the eraser
+        size: 70,
+        // the randomized scratch image
+        bg: selectBG,
+        // give real-time updates
+        realtime: true,
+        // The overlay image
+        fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
+        // The cursor (coin) image
+        cursor:
+          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+
+        scratchMove: function (percent) {
+          // Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
+          if (percent > 50 && promoCode != "") {
+            $(".promo-container").show();
+            $("body").removeClass("not-selectable");
+            $(".promo-code").html("Your code is: " + promoCode);
+          }
+        },
+      });
+      $("#promo1").wScratchPad({
+        // the size of the eraser
+        size: 70,
+        // the randomized scratch image
+        bg: selectBG,
+        // give real-time updates
+        realtime: true,
+        // The overlay image
+        fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
+        // The cursor (coin) image
+        cursor:
+          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+
+        scratchMove: function (percent) {
+          // Show the plain-text promo code and call-to-action when the scratch area is 50% scratched
+          if (percent > 50 && promoCode != "") {
+            $(".promo-container").show();
+            $("body").removeClass("not-selectable");
+            $(".promo-code").html("Your code is: " + promoCode);
+          }
+        },
+      });
     </script>
   </body>
 </html>
