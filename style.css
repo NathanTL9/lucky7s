@@ -124,18 +124,3 @@ body {
   -ms-user-select: none;
 }
 
-#success-msg {
-  opacity: 0;
-  transition: opacity 0.2s ease;
-  position: absolute;
-  padding: 5px 5px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  width: calc(100% - 8px);
-  height: 150px;
-  font-size: 100px;
-}
-body.success #success-msg {
-  opacity: 1;
-  transition: opacity 0.2 ease;
-}

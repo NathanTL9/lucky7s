@@ -57,9 +57,7 @@
           <div id="box22" class="scratchpad"></div>
         </div>
       </div>
-      <div id="success-msg">Phone unlocked</div>
     </div>
-    
     <script
       src="//code.jquery.com/jquery-latest.min.js"
       type="text/javascript"
@@ -139,8 +137,7 @@
       
       function checkSeven() {
         if (sevenCount == 3) {
-          window.close;
-          body.className = "success";
+          window.close();
         }
       }
 
@@ -353,7 +350,7 @@
             }
 
             if (boxes[i][j] == 0) {
-              let randNum = Math.floor(Math.random() * 9); // get number 0-8
+              let randNum = Math.floor(Math.random() * 8 + 1); // get number 0-8
               if (randNum == 7) {
                 randNum = 9; // change 7 to a 9 (so basically a random number 0-9 not including 7)
               }
