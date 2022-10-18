@@ -18,86 +18,50 @@
     <div class="board-container">
       <div class="board">
         <div class="scratch-container">
-          <div id="promo1" class="scratchpad"></div>
+          <div id="box00" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo2" class="scratchpad"></div>
+          <div id="box01" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo3" class="scratchpad"></div>
+          <div id="box02" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo4" class="scratchpad"></div>
+          <div id="box10" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo5" class="scratchpad"></div>
+          <div id="box11" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo6" class="scratchpad"></div>
+          <div id="box12" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo7" class="scratchpad"></div>
+          <div id="box20" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo8" class="scratchpad"></div>
+          <div id="box21" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
         <div class="scratch-container">
-          <div id="promo9" class="scratchpad"></div>
+          <div id="box22" class="scratchpad"></div>
         </div>
-        <div class="promo-container" style="display: none">
-          <div class="promo-code"></div>
-          <a href="www.we-know-fun.com" target="_blank" class="btn"
-            >Register Now</a
-          >
-        </div>
+        
+          
       </div>
     </div>
 
@@ -207,200 +171,221 @@
       }
 
       let sevenCount = 0;
+      
+      let box00 = false;
+      let box01 = false;
+      let box02 = false;
+      
+      let box10 = false;
+      let box11 = false;
+      let box12 = false;
+      
+      let box20 = false;
+      let box21 = false;
+      let box22 = false;
       function checkSeven() {
         if (sevenCount == 3) {
-          //unlock screen
+          
           window.location.href = document.location = "unlock.html";
         }
       }
 
       var selectBG = "#cacaca";
 
-      $("#promo1").wScratchPad({
-        // the size of the eraser
+      $("#box00").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
-          if (percent == 100) {
+          if (percent == 100 && box00 == false) {
             sevenCount++;
-            checkSeven();
+            box00 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo2").wScratchPad({
-        // the size of the eraser
+      $("#box01").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
           
-          if (percent == 100) {
+          if (percent == 100 && box01 == false) {
             sevenCount++;
-            checkSeven();
+            box01 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo3").wScratchPad({
-        // the size of the eraser
+      $("#box02").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box02 == false) {
             sevenCount++;
-            checkSeven();
+            box02 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo4").wScratchPad({
-        // the size of the eraser
+      $("#box10").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box10 == false) {
             sevenCount++;
-            checkSeven();
+            box10 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo5").wScratchPad({
-        // the size of the eraser
+      $("#box11").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box11 == false) {
             sevenCount++;
-            checkSeven();
+            box11 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo6").wScratchPad({
-        // the size of the eraser
+      $("#box12").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box12 == false) {
             sevenCount++;
-            checkSeven();
+            box12 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo7").wScratchPad({
-        // the size of the eraser
+      $("#box20").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box20 == false) {
             sevenCount++;
-            checkSeven();
+            box20 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo8").wScratchPad({
-        // the size of the eraser
+      $("#box21").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
-          if (percent == 100) {
+          if (percent == 100 && box21 == false) {
             sevenCount++;
-            checkSeven();
+            box21 = true;
           }
+          checkSeven();
         },
       });
-      $("#promo9").wScratchPad({
-        // the size of the eraser
+      $("#box22").wScratchPad({
+        
         size: 30,
-        // the randomized scratch image
+        
         bg: selectBG,
-        // give real-time updates
+         
         realtime: true,
-        // The overlay image
+        
         fg: "#ffffff",
-        // The cursor (coin) image
+        
         cursor: "",
 
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100) {
+          if (percent == 100 && box22 == false) {
             sevenCount++;
-            checkSeven();
+            box22 = true;
           }
+          checkSeven();
         },
       });
     </script>

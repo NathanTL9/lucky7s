@@ -67,11 +67,11 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .scratchpad {
-    width: 100%;
-    height: 100%;
+    width: 100px;
+    height: 100px;
   }
   .scratch-container {
-    width: 100% !important;
+    width: 100px !important;
   }
 }
 
