@@ -57,10 +57,9 @@
           <div id="box22" class="scratchpad"></div>
         </div>
       </div>
+      <div id="success-msg">Phone unlocked</div>
     </div>
-    <button>
-      Retry
-    </button>
+    
     <script
       src="//code.jquery.com/jquery-latest.min.js"
       type="text/javascript"
@@ -136,10 +135,12 @@
       let box21 = false;
       let box22 = false;
 
+      let body = document.querySelector("body");
+      
       function checkSeven() {
         if (sevenCount == 3) {
           window.close;
-          window.location.href = document.location = "unlock.html";
+          body.className = "success";
         }
       }
 
@@ -157,7 +158,10 @@
       function initPad() {
         $("#box00").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[0][0]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[0][0] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -172,7 +176,10 @@
         });
         $("#box01").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[0][1]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[0][1] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -187,7 +194,10 @@
         });
         $("#box02").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[0][2]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[0][2] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -202,7 +212,10 @@
         });
         $("#box10").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[1][0]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[1][0] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -217,7 +230,10 @@
         });
         $("#box11").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[1][1]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[1][1] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -232,7 +248,10 @@
         });
         $("#box12").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[1][2]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[1][2] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -247,7 +266,10 @@
         });
         $("#box20").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[2][0]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[2][0] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -262,7 +284,10 @@
         });
         $("#box21").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[2][1]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[2][1] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
@@ -277,7 +302,10 @@
         });
         $("#box22").wScratchPad({
           size: 30,
-          bg: getBackground(boxes[2][2]),
+          bg:
+            "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-" +
+            boxes[2][2] +
+            "-md.png?v=1666115838239",
           realtime: true,
           fg: "#808080",
           cursor: "",
