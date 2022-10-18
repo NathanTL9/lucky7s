@@ -24,8 +24,8 @@ button.box {
 
 .board {
   display: grid;
-  grid-template-rows: 150px 150px 150px;
-  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 100px 100px 100px;
+  grid-template-columns: 100px 100px 100px;
 }
 
 .grid {
@@ -38,7 +38,6 @@ button.box {
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
   min-height: 75vh;
 }
 
@@ -49,10 +48,9 @@ button.box {
   box-sizing: inherit;
 }
 .scratchpad {
-  width: 100px;
-  height: 100px;
+  width: 50px;
+  height: 50px;
   border: solid 10px #ffffff;
-  margin: 0 auto;
 }
 
 body {
@@ -69,26 +67,25 @@ body {
 }
 @media only screen and (max-width: 480px) {
   .scratchpad {
-    width: 400px;
-    height: 396px;
+    width: 75px;
+    height: 75px;
   }
   .scratch-container {
-    width: 400px !important;
+    width: 75px !important;
   }
 }
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 320px) {
   .scratchpad {
-    width: 290px;
-    height: 287px;
+    width: 50px;
+    height: 50px;
   }
   .scratch-container {
-    width: 290px !important;
+    width: 50px !important;
   }
 }
 .promo-container {
-  background: #fff;
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -97,13 +94,11 @@ body {
   margin: 0 auto;
   text-align: center;
   font-family: "Open Sans", Arial, Sans-serif;
-  color: #333;
   font-size: 16px;
   margin-top: 20px;
 }
 .btn {
   background: #56cfd2;
-  color: #fff;
   padding: 10px 25px;
   display: inline-block;
   margin-top: 15px;

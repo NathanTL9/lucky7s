@@ -70,6 +70,33 @@
           >Register Now</a
         >
       </div>
+        <div class="scratch-container">
+        <div id="promo7" class="scratchpad"></div>
+      </div>
+      <div class="promo-container" style="display: none">
+        <div class="promo-code"></div>
+        <a href="www.we-know-fun.com" target="_blank" class="btn"
+          >Register Now</a
+        >
+      </div>
+        <div class="scratch-container">
+        <div id="promo8" class="scratchpad"></div>
+      </div>
+      <div class="promo-container" style="display: none">
+        <div class="promo-code"></div>
+        <a href="www.we-know-fun.com" target="_blank" class="btn"
+          >Register Now</a
+        >
+      </div>
+        <div class="scratch-container">
+        <div id="promo9" class="scratchpad"></div>
+      </div>
+      <div class="promo-container" style="display: none">
+        <div class="promo-code"></div>
+        <a href="www.we-know-fun.com" target="_blank" class="btn"
+          >Register Now</a
+        >
+      </div>
       </div>
     </div>
 
@@ -130,7 +157,7 @@
         fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
         // The cursor (coin) image
         cursor:
-          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+          '',
 
         scratchMove: function (e, percent) {
           console.log(percent);
@@ -153,7 +180,7 @@
         fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
         // The cursor (coin) image
         cursor:
-          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+          '',
 
         scratchMove: function (e, percent) {
           console.log(percent);
@@ -176,7 +203,7 @@
         fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
         // The cursor (coin) image
         cursor:
-          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+          '',
 
         scratchMove: function (e, percent) {
           console.log(percent);
@@ -199,7 +226,7 @@
         fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
         // The cursor (coin) image
         cursor:
-          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+          '',
 
         scratchMove: function (e, percent) {
           console.log(percent);
@@ -222,7 +249,76 @@
         fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
         // The cursor (coin) image
         cursor:
-          'url("https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Fcoin1.png") 5 5, default',
+          '',
+
+        scratchMove: function (e, percent) {
+          console.log(percent);
+
+          if (percent > 50 && promoCode != "") {
+            $(".promo-container").show();
+            $("body").removeClass("not-selectable");
+            $(".promo-code").html("Your code is: " + promoCode);
+          }
+        },
+      });
+      $("#promo7").wScratchPad({
+        // the size of the eraser
+        size: 30,
+        // the randomized scratch image
+        bg: selectBG,
+        // give real-time updates
+        realtime: true,
+        // The overlay image
+        fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
+        // The cursor (coin) image
+        cursor:
+          '',
+
+        scratchMove: function (e, percent) {
+          console.log(percent);
+
+          if (percent > 50 && promoCode != "") {
+            $(".promo-container").show();
+            $("body").removeClass("not-selectable");
+            $(".promo-code").html("Your code is: " + promoCode);
+          }
+        },
+      });
+      $("#promo8").wScratchPad({
+        // the size of the eraser
+        size: 30,
+        // the randomized scratch image
+        bg: selectBG,
+        // give real-time updates
+        realtime: true,
+        // The overlay image
+        fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
+        // The cursor (coin) image
+        cursor:
+          '',
+
+        scratchMove: function (e, percent) {
+          console.log(percent);
+
+          if (percent > 50 && promoCode != "") {
+            $(".promo-container").show();
+            $("body").removeClass("not-selectable");
+            $(".promo-code").html("Your code is: " + promoCode);
+          }
+        },
+      });
+      $("#promo9").wScratchPad({
+        // the size of the eraser
+        size: 30,
+        // the randomized scratch image
+        bg: selectBG,
+        // give real-time updates
+        realtime: true,
+        // The overlay image
+        fg: "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Foverlay.png",
+        // The cursor (coin) image
+        cursor:
+          '',
 
         scratchMove: function (e, percent) {
           console.log(percent);
