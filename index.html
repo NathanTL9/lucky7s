@@ -14,7 +14,7 @@
     <style type="text/css"></style>
   </head>
   <img src="https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/logo.png?v=1666113835227" class="logo"/>
-  <body style="background-color: #34a56f">
+  <body style="background-color: #34a56f" onload="init()">
     <div class="board-container">
       <div class="board">
         <div class="scratch-container">
@@ -170,7 +170,7 @@
         }
       }
 
-      let sevenCount = 0;
+      let sevenCount = 1;
       
       let box00 = false;
       let box01 = false;
@@ -183,9 +183,9 @@
       let box20 = false;
       let box21 = false;
       let box22 = false;
+      
       function checkSeven() {
         if (sevenCount == 3) {
-          
           window.location.href = document.location = "unlock.html";
         }
       }
@@ -206,11 +206,11 @@
 
         scratchMove: function (e, percent) {
           console.log(percent);
-          if (percent == 100 && box00 == false) {
+          if (percent == 100 && box00 == false && boxes[0][0] == 7) {
             sevenCount++;
             box00 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box01").wScratchPad({
@@ -228,11 +228,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
           
-          if (percent == 100 && box01 == false) {
+          if (percent > 50 && box01 == false && boxes[0][1] == 7) {
             sevenCount++;
             box01 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box02").wScratchPad({
@@ -250,11 +250,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box02 == false) {
+          if (percent > 50 && box02 == false && boxes[0][2] == 7) {
             sevenCount++;
             box02 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box10").wScratchPad({
@@ -272,11 +272,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box10 == false) {
+          if (percent > 50 && box10 == false && boxes[1][0] == 7) {
             sevenCount++;
             box10 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box11").wScratchPad({
@@ -294,11 +294,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box11 == false) {
+          if (percent > 50 && box11 == false && boxes[1][1] == 7) {
             sevenCount++;
             box11 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box12").wScratchPad({
@@ -316,11 +316,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box12 == false) {
+          if (percent > 50 && box12 == false && boxes[1][2] == 7) {
             sevenCount++;
             box12 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box20").wScratchPad({
@@ -338,11 +338,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box20 == false) {
+          if (percent > 50 && box20 == false && boxes[2][0] == 7) {
             sevenCount++;
             box20 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box21").wScratchPad({
@@ -359,11 +359,11 @@
 
         scratchMove: function (e, percent) {
           console.log(percent);
-          if (percent == 100 && box21 == false) {
+          if (percent > 50 && box21 == false && boxes[2][1] == 7) {
             sevenCount++;
             box21 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
       $("#box22").wScratchPad({
@@ -381,11 +381,11 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent == 100 && box22 == false) {
+          if (percent > 50 && box22 == false && boxes[2][2] == 7) {
             sevenCount++;
             box22 = true;
+            checkSeven();
           }
-          checkSeven();
         },
       });
     </script>
