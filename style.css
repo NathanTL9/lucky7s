@@ -1,25 +1,116 @@
-/* a minimalist set of CSS resets */
-
-/* default to border-box */
-html {
-  box-sizing: border-box;
-  font-size: 16px;
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
 }
 
-*, *:before, *:after {
+button.box {
+  background-color: #ffce44;
+  border-color: black;
+  border-radius: 10px;
+  color: black;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  position: center;
+  text-align: center;
+  font-size: 20px;
+  width: 75px;
+  height: 50px;
+}
+
+.board {
+  display: grid;
+  grid-template-rows: 150px 150px 150px;
+  grid-template-columns: 150px 150px 150px;
+}
+
+.grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.board-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 75vh;
+}
+
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
-
-/* adjust typography defaults */
-body {
-  margin: 1rem;
-  font-family: sans-serif;
-  line-height: 1.5;
+.scratchpad {
+  width: 100px;
+  height: 100px;
+  border: solid 10px #ffffff;
+  margin: 0 auto;
 }
 
-/* images and videos max out at full width */
-img,
-video {
-  height: auto;
-  max-width: 100%;
+body {
+  background: #efefef;
+}
+.scratch-container {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  width: 100%;
+}
+@media only screen and (max-width: 480px) {
+  .scratchpad {
+    width: 400px;
+    height: 396px;
+  }
+  .scratch-container {
+    width: 400px !important;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  .scratchpad {
+    width: 290px;
+    height: 287px;
+  }
+  .scratch-container {
+    width: 290px !important;
+  }
+}
+.promo-container {
+  background: #fff;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  width: 450px;
+  padding: 20px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: "Open Sans", Arial, Sans-serif;
+  color: #333;
+  font-size: 16px;
+  margin-top: 20px;
+}
+.btn {
+  background: #56cfd2;
+  color: #fff;
+  padding: 10px 25px;
+  display: inline-block;
+  margin-top: 15px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-radius: 3px;
+  -moz-border-radius: 3px;
+  -webkit-border-radiuss: 3px;
 }
