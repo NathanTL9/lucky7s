@@ -187,10 +187,6 @@
       var selectBG = "";
 
       function getBackground(i) {
-        console.log(boxes[i][j]);
-        console.log(i);
-        console.log(j);
-        
         if (i == 7) {
           return "https://cdn.glitch.global/9c6f1cae-aa7b-4345-8f94-30454f6b1066/red-rounded-square-with-number-7-md.png?v=1666115838239";
         }
@@ -199,9 +195,10 @@
         }
       }
 
+      function initPad() {
       $("#box00").wScratchPad({
         size: 30,
-        bg: getBackground(boxes[0][0]),
+        bg: getBackground(7),
         realtime: true,
         fg: "#ffffff",
         cursor: "",
