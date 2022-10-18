@@ -107,7 +107,7 @@
     ></script>
     <script src="/wScratchPad.min.js" type="text/javascript"></script>
     <script>
-          let boxes = [
+      let boxes = [
         [0, 0, 0],
         [0, 0, 0],
         [0, 0, 0],
@@ -203,20 +203,19 @@
             console.log(boxes[i][j]);
           }
         }
-      };
-
+      }
 
       let sevenCount = 0;
       function checkSeven() {
         if (sevenCount == 3) {
           //unlock screen
           window.location.href = document.location = "unlock.html";
-        };
+        }
+      }
     </script>
-    
+
     <script type="text/javascript">
-      var selectBG =
-        "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
+      var selectBG = "#cacaca";
 
       $("#promo1").wScratchPad({
         // the size of the eraser
@@ -231,14 +230,12 @@
         cursor: "",
 
         scratchMove: function (e, percent) {
-
-          
-          checkSeven();
           if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
             sevenCount++;
           }
+          checkSeven();
         },
       });
       $("#promo2").wScratchPad({
@@ -301,6 +298,7 @@
           console.log(percent);
 
           if (percent > 50) {
+            this.clear();
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -407,7 +405,6 @@
           if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
-            
           }
         },
       });
