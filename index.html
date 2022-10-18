@@ -203,7 +203,7 @@
             console.log(boxes[i][j]);
           }
         }
-      }
+      };
 
 
       let sevenCount = 0;
@@ -211,8 +211,9 @@
         if (sevenCount == 3) {
           //unlock screen
           window.location.href = document.location = "unlock.html";
-        }
+        };
     </script>
+    
     <script type="text/javascript">
       var selectBG =
         "https://cdn.glitch.com/2c225b7b-6134-4f2b-9842-1d5d060d9cd4%2Farcher-slideGreen.png";
@@ -230,11 +231,13 @@
         cursor: "",
 
         scratchMove: function (e, percent) {
-          console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          
+          checkSeven();
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
+            sevenCount++;
           }
         },
       });
@@ -256,6 +259,7 @@
           if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
+            sevenCount++;
           }
         },
       });
@@ -274,9 +278,10 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
+            sevenCount++;
           }
         },
       });
@@ -295,7 +300,7 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -316,7 +321,7 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -337,7 +342,7 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -358,7 +363,7 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -378,8 +383,7 @@
 
         scratchMove: function (e, percent) {
           console.log(percent);
-
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
           }
@@ -400,9 +404,10 @@
         scratchMove: function (e, percent) {
           console.log(percent);
 
-          if (percent > 50 && promoCode != "") {
+          if (percent > 50) {
             $(".promo-container").show();
             $("body").removeClass("not-selectable");
+            
           }
         },
       });
